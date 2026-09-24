@@ -27,12 +27,12 @@ type CartItem = { productId: string; size: string; quantity: number };
 const WHATSAPP_NUMBER = "258851506799";
 
 const products: Product[] = [
-  { id: "baggy", name: "Baggy Sweatpants", category: "BOTTOMS", price: 1900, original: 2400, discount: 20, description: "Relaxed baggy fit designed for everyday movement.", image: baggyImage, sizes: ["M", "L", "XL"], stock: { M: 2, L: 3, XL: 1 } },
+  { id: "baggy", name: "Baggy Sweatpants", category: "BOTTOMS", price: 1900, original: 2400, discount: 20, description: "Relaxed baggy fit designed for everyday movement.", image: baggyImage.url, sizes: ["M", "L", "XL"], stock: { M: 2, L: 3, XL: 1 } },
   { id: "sweatpants", name: "Sweatpants", category: "BOTTOMS", price: 1900, original: 2400, discount: 20, description: "A clean straight-leg essential made for daily wear.", image: sweatpantsImage, sizes: ["S", "M", "L"], stock: { S: 1, M: 2, L: 2 } },
-  { id: "zip", name: "Quarter Zip", category: "OUTERWEAR", price: 1900, original: 2400, discount: 20, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage, sizes: ["M", "L", "XL"] },
-  { id: "crop", name: "Crop Tee", category: "TOPS", price: 1400, original: 1780, discount: 20, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage, sizes: ["S", "M", "L", "XL"] },
-  { id: "interior", name: "Interior Tee", category: "TOPS", price: 800, original: 1080, discount: 26, description: "Minimal everyday tee with a community-only price.", image: interiorImage, sizes: ["S", "M", "L", "XL"] },
-  { id: "hat", name: "Trucker Hat", category: "ACCESSORIES", price: 680, original: 1080, discount: 40, description: "The Just Minimal Trucker Hat. Community offer.", image: hatImage, sizes: ["ONE SIZE"] },
+  { id: "zip", name: "Quarter Zip", category: "OUTERWEAR", price: 1900, original: 2400, discount: 20, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, sizes: ["M", "L", "XL"] },
+  { id: "crop", name: "Crop Tee", category: "TOPS", price: 1400, original: 1780, discount: 20, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage.url, sizes: ["S", "M", "L", "XL"] },
+  { id: "interior", name: "Interior Tee", category: "TOPS", price: 800, original: 1080, discount: 26, description: "Minimal everyday tee with a community-only price.", image: interiorImage.url, sizes: ["S", "M", "L", "XL"] },
+  { id: "hat", name: "Trucker Hat", category: "ACCESSORIES", price: 680, original: 1080, discount: 40, description: "The Just Minimal Trucker Hat. Community offer.", image: hatImage.url, sizes: ["ONE SIZE"] },
 ];
 
 const paymentDetails: Record<string, string[]> = {
