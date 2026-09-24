@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Minus, Plus, ShoppingBag, X } from "lucide-react";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
-import baggyImage from "@/assets/baggy-sweatpants.jpg";
+import baggyImage from "@/assets/baggy-sweatpants.png.asset.json";
 import sweatpantsImage from "@/assets/sweatpants.jpg";
-import zipImage from "@/assets/quarter-zip.jpg";
-import cropImage from "@/assets/crop-tee.jpg";
-import interiorImage from "@/assets/interior-tee.jpg";
-import hatImage from "@/assets/trucker-hat.jpg";
+import zipImage from "@/assets/quarter-zip.png.asset.json";
+import cropImage from "@/assets/crop-tee.png.asset.json";
+import interiorImage from "@/assets/interior-tee.png.asset.json";
+import hatImage from "@/assets/trucker-hat.png.asset.json";
 
 type Product = {
   id: string;
