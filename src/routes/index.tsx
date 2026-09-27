@@ -99,12 +99,9 @@ function Storefront() {
       </header>
 
       <main id="top">
-        <section className="mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-center px-5 py-20 md:px-10">
+        <section className="mx-auto flex max-w-7xl flex-col justify-center px-5 py-16 md:px-10 md:py-24">
           <span className="eyebrow">Community access / 01</span>
-          <h1 className="mt-7 max-w-6xl font-display text-[clamp(3.7rem,10vw,8.8rem)] font-semibold uppercase leading-[0.82]">
-            You were here.<br /><span className="text-muted-foreground">This is for you.</span>
-          </h1>
-          <div className="mt-10 grid max-w-4xl gap-7 border-t border-border pt-6 md:grid-cols-2">
+          <div className="mt-8 grid max-w-4xl gap-7 border-t border-border pt-6 md:grid-cols-2">
             <p className="max-w-lg text-base leading-relaxed text-muted-foreground">Exclusive community pricing on selected Just Minimal pieces. Choose your fit and send your order directly to us on WhatsApp.</p>
             <div className="flex flex-wrap items-start gap-3 md:justify-end"><span className="border border-foreground px-3 py-2 font-label text-[0.65rem] font-bold tracking-[0.12em]">25–40% OFF SELECTED PIECES</span><a href="#shop" className="bg-primary px-5 py-3 font-label text-[0.68rem] font-bold uppercase tracking-[0.12em] text-primary-foreground">Shop offer</a></div>
           </div>
