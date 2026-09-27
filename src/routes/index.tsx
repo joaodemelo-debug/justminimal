@@ -39,7 +39,10 @@ function Storefront() {
   useEffect(() => {
     const saved = window.localStorage.getItem("jm_cart");
     if (!saved) return;
-    try { setCart(JSON.parse(saved) as CartItem[]); } catch { window.localStorage.removeItem("jm_cart"); }
+    try {
+      const stored = JSON.parse(saved) as CartItem[];
+      setCart(Array.isArray(stored) ? stored.filter((item) => products.some((product) => product.id === item.productId)) : []);
+    } catch { window.localStorage.removeItem("jm_cart"); }
   }, []);
 
   useEffect(() => { window.localStorage.setItem("jm_cart", JSON.stringify(cart)); }, [cart]);
