@@ -39,7 +39,10 @@ function Storefront() {
   useEffect(() => {
     const saved = window.localStorage.getItem("jm_cart");
     if (!saved) return;
-    try { setCart(JSON.parse(saved) as CartItem[]); } catch { window.localStorage.removeItem("jm_cart"); }
+    try {
+      const stored = JSON.parse(saved) as CartItem[];
+      setCart(Array.isArray(stored) ? stored.filter((item) => products.some((product) => product.id === item.productId)) : []);
+    } catch { window.localStorage.removeItem("jm_cart"); }
   }, []);
 
   useEffect(() => { window.localStorage.setItem("jm_cart", JSON.stringify(cart)); }, [cart]);
@@ -103,7 +106,7 @@ function Storefront() {
           </h1>
           <div className="mt-10 grid max-w-4xl gap-7 border-t border-border pt-6 md:grid-cols-2">
             <p className="max-w-lg text-base leading-relaxed text-muted-foreground">Exclusive community pricing on selected Just Minimal pieces. Choose your fit and send your order directly to us on WhatsApp.</p>
-            <div className="flex flex-wrap items-start gap-3 md:justify-end"><span className="border border-foreground px-3 py-2 font-label text-[0.65rem] font-bold tracking-[0.12em]">20–40% OFF SELECTED PIECES</span><a href="#shop" className="bg-primary px-5 py-3 font-label text-[0.68rem] font-bold uppercase tracking-[0.12em] text-primary-foreground">Shop offer</a></div>
+            <div className="flex flex-wrap items-start gap-3 md:justify-end"><span className="border border-foreground px-3 py-2 font-label text-[0.65rem] font-bold tracking-[0.12em]">25–40% OFF SELECTED PIECES</span><a href="#shop" className="bg-primary px-5 py-3 font-label text-[0.68rem] font-bold uppercase tracking-[0.12em] text-primary-foreground">Shop offer</a></div>
           </div>
         </section>
 

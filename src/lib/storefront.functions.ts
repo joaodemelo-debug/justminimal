@@ -10,7 +10,6 @@ import hatImage from "@/assets/trucker-hat.png.asset.json";
 import interiorImage from "@/assets/interior-tee.png.asset.json";
 import logoImage from "@/assets/just-minimal-logo.png.asset.json";
 import zipImage from "@/assets/quarter-zip.png.asset.json";
-import sweatpantsImage from "@/assets/sweatpants.jpg.asset.json";
 
 export type Product = {
   id: string;
@@ -63,13 +62,12 @@ export const unlockStore = createServerFn({ method: "POST" })
 export const getStorefrontData = createServerFn({ method: "GET" }).handler(async () => {
   await requireUnlocked();
   const products: Product[] = [
-    { id: "baggy", name: "Baggy Sweatpants", category: "BOTTOMS", price: 1900, original: 2400, discount: 20, description: "Relaxed baggy fit designed for everyday movement.", image: baggyImage.url, colors: ["Azul escuro", "Cinza", "Preto"], sizes: ["M", "L", "XL"], stock: { M: 2, L: 3, XL: 1 } },
-    { id: "sweatpants", name: "Sweatpants", category: "BOTTOMS", price: 1900, original: 2400, discount: 20, description: "A clean straight-leg essential made for daily wear.", image: sweatpantsImage.url, colors: ["Preto"], sizes: ["S", "M", "L"], stock: { S: 1, M: 2, L: 2 } },
-    { id: "zip", name: "Quarter Zip", category: "OUTERWEAR", price: 1900, original: 2400, discount: 20, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, colors: ["Preto", "Cinza"], sizes: ["M", "L", "XL"] },
-    { id: "crop", name: "Crop Tee", category: "TOPS", price: 1400, original: 1780, discount: 20, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage.url, colors: ["Branco", "Preto"], sizes: ["S", "M", "L", "XL"] },
+    { id: "baggy", name: "Baggy Sweatpants", category: "BOTTOMS", price: 1800, original: 2400, discount: 25, description: "Relaxed baggy fit designed for everyday movement.", image: baggyImage.url, colors: ["Azul escuro", "Cinza", "Preto"], sizes: ["M", "L", "XL"], stock: { M: 2, L: 3, XL: 1 } },
+    { id: "zip", name: "Quarter Zip", category: "OUTERWEAR", price: 1800, original: 2400, discount: 25, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, colors: ["Preto", "Cinza"], sizes: ["M", "L", "XL"] },
+    { id: "crop", name: "Crop Tee", category: "TOPS", price: 938, original: 1400, discount: 33, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage.url, colors: ["Branco", "Preto"], sizes: ["S", "M", "L", "XL"] },
     { id: "interior", name: "Interior Tee", category: "TOPS", price: 800, original: 1080, discount: 26, description: "Minimal everyday tee with a community-only price.", image: interiorImage.url, colors: ["Preto", "Branco"], sizes: ["S", "M", "L", "XL"] },
     { id: "hat", name: "Trucker Hat", category: "ACCESSORIES", price: 680, original: 1080, discount: 40, description: "The Just Minimal Trucker Hat. Community offer.", image: hatImage.url, colors: ["Rosa", "Preto"], sizes: ["ONE SIZE"] },
-    { id: "crop-top", name: "Crop Top Feminino", category: "WOMEN", price: 1400, original: 1780, discount: 20, description: "Crop top feminino Just Minimal, disponível em edição limitada.", image: cropTopBlackImage.url, images: { Preto: cropTopBlackImage.url, Branco: cropTopWhiteImage.url }, colors: ["Preto", "Branco"], sizes: ["S", "M"], variantStock: { "Preto:S": 1, "Preto:M": 1, "Branco:M": 2 } },
+    { id: "crop-top", name: "Crop Top Feminino", category: "WOMEN", price: 476, original: 680, discount: 30, description: "Crop top feminino Just Minimal, disponível em edição limitada.", image: cropTopBlackImage.url, images: { Preto: cropTopBlackImage.url, Branco: cropTopWhiteImage.url }, colors: ["Preto", "Branco"], sizes: ["S", "M"], variantStock: { "Preto:S": 1, "Preto:M": 1, "Branco:M": 2 } },
   ];
   return {
     products,
