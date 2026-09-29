@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { ExternalLink, Minus, Plus, ShoppingBag, Users, X } from "lucide-react";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,11 @@ const WHATSAPP_NUMBER = "258851506799";
 const money = (value: number) => `${new Intl.NumberFormat("en-US").format(value)} MZN`;
 
 export const Route = createFileRoute("/")({
-  loader: () => getStorefrontData(),
+  loader: async () => {
+    const data = await getStorefrontData();
+    if (data.locked) throw redirect({ to: "/unlock" });
+    return data;
+  },
   head: () => ({ meta: [
     { title: "Just Minimal — Community Access" },
     { name: "description", content: "Exclusive community pricing on selected Just Minimal pieces." },
