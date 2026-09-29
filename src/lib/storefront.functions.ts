@@ -1,4 +1,3 @@
-import { redirect } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { useSession } from "@tanstack/react-start/server";
 import { createHash, timingSafeEqual } from "node:crypto";
@@ -46,7 +45,7 @@ function passwordMatches(input: string, expected: string) {
 
 async function requireUnlocked() {
   const session = await useSession<GateSession>(sessionConfig());
-  if (!session.data.unlocked) throw redirect({ to: "/unlock" });
+  return Boolean(session.data.unlocked);
 }
 
 export const unlockStore = createServerFn({ method: "POST" })
@@ -60,7 +59,7 @@ export const unlockStore = createServerFn({ method: "POST" })
   });
 
 export const getStorefrontData = createServerFn({ method: "GET" }).handler(async () => {
-  await requireUnlocked();
+  if (!(await requireUnlocked())) return { locked: true as const };
   const products: Product[] = [
     { id: "baggy", name: "Baggy Sweatpants", category: "BOTTOMS", price: 1800, original: 2400, discount: 25, description: "Relaxed baggy fit designed for everyday movement.", image: baggyImage.url, colors: ["Azul escuro", "Cinza", "Preto"], sizes: ["M", "L", "XL"], stock: { M: 2, L: 3, XL: 1 } },
     { id: "zip", name: "Quarter Zip", category: "OUTERWEAR", price: 1800, original: 2400, discount: 25, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, colors: ["Preto", "Cinza"], sizes: ["M", "L", "XL"] },
@@ -70,6 +69,7 @@ export const getStorefrontData = createServerFn({ method: "GET" }).handler(async
     { id: "crop-top", name: "Crop Top Feminino", category: "WOMEN", price: 400, original: 680, discount: 41, description: "Crop top feminino Just Minimal, disponível em edição limitada.", image: cropTopBlackImage.url, images: { Preto: cropTopBlackImage.url, Branco: cropTopWhiteImage.url }, colors: ["Preto", "Branco"], sizes: ["S", "M"], variantStock: { "Preto:S": 1, "Preto:M": 1, "Branco:M": 2 } },
   ];
   return {
+    locked: false as const,
     products,
     logo: logoImage.url,
     communityUrl: "https://chat.whatsapp.com/CnEffGahKia2F0Y2F2mE6i?mode=gi_t",
