@@ -32,7 +32,7 @@ function sessionConfig() {
   return {
     password: process.env['SESSION_SECRET']!,
     name: "just-minimal-access",
-    maxAge: 60 * 60 * 24 * 30,
+    maxAge: 60 * 60 * 2,
     cookie: { httpOnly: true, secure: true, sameSite: "lax" as const, path: "/" },
   };
 }
