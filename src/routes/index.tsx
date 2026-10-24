@@ -98,7 +98,7 @@ function Storefront() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-background/90 px-5 backdrop-blur-md md:px-10">
         <a href="#top" aria-label="Just Minimal home"><img src={logo} alt="Just Minimal" width={768} height={768} className="h-11 w-32 object-contain object-left" /></a>
-        <div className="flex items-center gap-2"><Button variant="outline" size="sm" asChild><a href={communityUrl} target="_blank" rel="noreferrer"><Users size={14} /> <span className="hidden sm:inline">Join community</span><ExternalLink size={12} /></a></Button><Button onClick={() => setCartOpen(true)} className="gap-2"><ShoppingBag size={15} /> Cart <span className="flex size-5 items-center justify-center bg-primary-foreground text-primary">{count}</span></Button></div>
+        <div className="flex items-center gap-2"><a href="/south-africa" className="hidden border border-border px-3 py-2 font-label text-[0.65rem] font-bold uppercase tracking-[0.1em] md:inline-block">South Africa store</a><Button variant="outline" size="sm" asChild><a href={communityUrl} target="_blank" rel="noreferrer"><Users size={14} /> <span className="hidden sm:inline">Join community</span><ExternalLink size={12} /></a></Button><Button onClick={() => setCartOpen(true)} className="gap-2"><ShoppingBag size={15} /> Cart <span className="flex size-5 items-center justify-center bg-primary-foreground text-primary">{count}</span></Button></div>
       </header>
 
       <main id="top">
