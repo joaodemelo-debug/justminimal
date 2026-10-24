@@ -1,41 +1,28 @@
-# Cozy Comfort Collection
+# Just Minimal
 
-transforme isso em loveable:
-Baggy Sweatpants
+Official storefront for the Just Minimal collection: minimal streetwear, monochrome editorial presentation, orders placed straight into WhatsApp.
 
-Tamanhos: M, L, XL
+## Stores
 
-Stock: M-2, L-3, XL-1
+- **Mozambique** — `/` — prices in Meticais (MZN), payment by M-Pesa, e-Mola or Millennium BIM transfer.
+- **South Africa** — `/south-africa` — prices in South African rand (ZAR), entry with a South African mobile number.
 
-Sweatpants
+## Catalogue
 
-Tamanhos: S, M, L
+| Product | Category | Mozambique | South Africa |
+| --- | --- | --- | --- |
+| Baggy Sweatpants | BOTTOMS | 2 400 MZN | 650 ZAR |
+| Quarter Zip | OUTERWEAR | 2 400 MZN | 650 ZAR |
+| Crop Tee | TOPS | 1 400 MZN | 380 ZAR |
+| Regatta Tee | TOPS | 1 080 MZN | 290 ZAR |
+| Trucker Hat | ACCESSORIES | 1 080 MZN | 290 ZAR |
+| Crop Top | WOMEN | 680 MZN | 185 ZAR |
 
-Stock: S-1, M-2, L-2
+Stock is catalogue availability: sizes show the units listed for each product, and the women's crop top is tracked per color and size.
 
-Quarter Zip
+## Ordering
 
-Tamanhos: M, L, XL
-
-Stock: ...
-
-Crop Tee
-
-Tamanhos: S, M, L, XL
-
-Stock: ...
-
-Interior Tee
-
-Tamanhos: S, M, L, XL
-
-Stock: ...
-
-Trucker Hat
-
-Tamanho: ONE SIZE
-
-Stock: ...
+Products open a dialog for color, size and quantity, the cart is kept in the browser, and checkout collects name, WhatsApp number, delivery area, payment method and payment status before opening a pre-filled WhatsApp message with the order.
 
 This project was built with [Lovable](https://lovable.dev).
 
