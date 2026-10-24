@@ -13,3 +13,4 @@
 
 - Both storefronts are public: no access-password gate and no discount UI. Show full prices only — the user removed the community gate and the discounts on 2026-10-24.
 - Two markets live in one app: `/` for Mozambique (MZN) and `/south-africa` for South Africa (ZAR); every order leaves through the same WhatsApp number.
+- Keep `/unlock` as a redirect to `/` so retired password-page links open the public storefront.

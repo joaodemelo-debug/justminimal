@@ -14,6 +14,10 @@ export const Route = createFileRoute("/south-africa")({
   head: () => ({ meta: [
     { title: "Just Minimal South Africa — Official Store" },
     { name: "description", content: "Explore Just Minimal South Africa. Streetwear with intention." },
+    { property: "og:title", content: "Just Minimal South Africa — Official Store" },
+    { property: "og:description", content: "Explore Just Minimal South Africa. Streetwear with intention." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
   ] }),
   component: SouthAfricaStore,
 });
