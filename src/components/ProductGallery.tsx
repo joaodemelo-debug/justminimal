@@ -12,7 +12,11 @@ export function ProductGallery({ name, photos }: { name: string; photos: string[
       {photos.length > 1 && <>
         <button onClick={() => go(index - 1)} disabled={index === 0} aria-label="Previous photo" className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/90 px-3 py-2 font-bold disabled:opacity-0">‹</button>
         <button onClick={() => go(index + 1)} disabled={index === photos.length - 1} aria-label="Next photo" className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/90 px-3 py-2 font-bold disabled:opacity-0">›</button>
-        <div className="absolute inset-x-0 bottom-3 flex justify-center gap-1.5">{photos.map((src, i) => <button key={src} onClick={() => go(i)} aria-label={`Photo ${i + 1}`} className={`h-1.5 w-6 ring-1 ${i === index ? "bg-primary ring-background/70" : "bg-background/80 ring-black/25"}`} />)}</div>
+        <div className="absolute inset-x-0 bottom-3 flex justify-center">
+          <div className="flex w-fit items-center gap-1.5 rounded-full bg-background/85 px-3 py-2 ring-1 ring-black/10 backdrop-blur-sm">
+            {photos.map((src, i) => <button key={src} onClick={() => go(i)} aria-label={`Photo ${i + 1}`} className={`h-1.5 w-6 rounded-full ${i === index ? "bg-primary" : "bg-black/25"}`} />)}
+          </div>
+        </div>
       </>}
     </div>
   );
