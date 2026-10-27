@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-exportfunction ProductGallery({ name, photos }: { name: string; photos: string[] }) {
+export function ProductGallery({ name, photos }: { name: string; photos: string[] }) {
   const [index, setIndex] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const go = (next: number) => { const el = ref.current; if (!el) return; const i = Math.max(0, Math.min(photos.length - 1, next)); el.scrollTo({ left: i * el.clientWidth, behavior: "smooth" }); };
