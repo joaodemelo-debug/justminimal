@@ -33,7 +33,7 @@ export const getStorefrontData = createServerFn({ method: "GET" }).handler(async
     { id: "crop", name: "Boxy Crop Tee", category: "TOPS", price: 1400, original: 1400, discount: 0, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage.url, colors: ["Branco", "Preto"], sizes: ["S", "M", "L", "XL"] },
     { id: "interior", name: "Regatta Tee", category: "TOPS", price: 1080, original: 1080, discount: 0, description: "Minimal everyday tee designed for effortless daily styling.", image: interiorImage.url, colors: ["Preto", "Branco"], sizes: ["S", "M", "L", "XL"] },
     { id: "hat", name: "Trucker Hat", category: "ACCESSORIES", price: 1080, original: 1080, discount: 0, description: "The Just Minimal Trucker Hat.", image: hatImage.url, colors: ["Rosa", "Preto"], sizes: ["ONE SIZE"] },
-    { id: "crop-top", name: "Crop Top Feminino", category: "WOMEN", price: 680, original: 680, discount: 0, description: "Crop top feminino Just Minimal, disponível em edição limitada.", image: cropTopBlackImage.url, images: { Preto: cropTopBlackImage.url, Branco: cropTopWhiteImage.url }, colors: ["Preto", "Branco"], sizes: ["S", "M"], variantStock: { "Preto:S": 1, "Preto:M": 1, "Branco:M": 2 } },
+    { id: "crop-top", name: "Crop Top Feminino", category: "WOMEN", price: 680, original: 680, discount: 0, description: "Crop top feminino Just Minimal, disponível em edição limitada.", image: cropTopBlackImage.url, images: { Preto: cropTopBlackImage.url }, colors: ["Preto"], sizes: ["S", "M", "XL"], stock: { S: 4, M: 1, XL: 1 }, variantStock: { "Preto:S": 4, "Preto:M": 1, "Preto:XL": 1 } },
   ];
   return {
     products,
