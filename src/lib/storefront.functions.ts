@@ -4,6 +4,8 @@ import baggy2 from "@/assets/baggy-2.png.asset.json";
 import baggy3 from "@/assets/baggy-3.png.asset.json";
 import baggy4 from "@/assets/baggy-4.png.asset.json";
 import sweatpantsImage from "@/assets/sweatpants.png.asset.json";
+import sweatpants1 from "@/assets/sweatpants-1.png.asset.json";
+import sweatpants2 from "@/assets/sweatpants-2.png.asset.json";
 import cropImage from "@/assets/crop-tee.png.asset.json";
 import cropTopBlackImage from "@/assets/crop-top-black.png.asset.json";
 import cropTopWhiteImage from "@/assets/crop-top-white.png.asset.json";
@@ -32,7 +34,7 @@ export type Product = {
 export const getStorefrontData = createServerFn({ method: "GET" }).handler(async () => {
   const products: Product[] = [
     { id: "baggy", name: "Baggy Sweatpants", category: "BOTTOMS", price: 2400, original: 2400, discount: 0, description: "Relaxed baggy fit designed for everyday movement.", image: baggy1.url, gallery: [baggy1.url, baggy2.url, baggy3.url, baggy4.url], colors: ["Azul escuro", "Cinza", "Preto"], sizes: ["M", "L", "XL"], stock: { M: 2, L: 3, XL: 1 } },
-    { id: "sweatpants", name: "Sweatpants", category: "BOTTOMS", price: 2000, original: 2000, discount: 0, description: "Minimal sweatpants designed for everyday comfort and effortless styling.", image: sweatpantsImage.url, colors: ["Preto"], sizes: ["S", "M", "L", "XL", "2XL"] },
+    { id: "sweatpants", name: "Sweatpants", category: "BOTTOMS", price: 2000, original: 2000, discount: 0, description: "Minimal sweatpants designed for everyday comfort and effortless styling.", image: sweatpantsImage.url, gallery: [sweatpantsImage.url, sweatpants1.url, sweatpants2.url], colors: ["Preto"], sizes: ["S", "M", "L", "XL", "2XL"] },
     { id: "zip", name: "Quarter Zip", category: "OUTERWEAR", price: 2400, original: 2400, discount: 0, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, colors: ["Preto", "Cinza"], sizes: ["M", "L", "XL"] },
     { id: "crop", name: "Boxy Crop Tee", category: "TOPS", price: 1400, original: 1400, discount: 0, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage.url, colors: ["Branco", "Preto"], sizes: ["S", "M", "L", "XL"] },
     { id: "interior", name: "Regatta Tee", category: "TOPS", price: 1080, original: 1080, discount: 0, description: "Minimal everyday tee designed for effortless daily styling.", image: interiorImage.url, colors: ["Preto", "Branco"], sizes: ["S", "M", "L", "XL"] },
