@@ -4,6 +4,8 @@ import baggy2 from "@/assets/baggy-2.png.asset.json";
 import baggy3 from "@/assets/baggy-3.png.asset.json";
 import baggy4 from "@/assets/baggy-4.png.asset.json";
 import sweatpantsImage from "@/assets/sweatpants.png.asset.json";
+import sweatpants1 from "@/assets/sweatpants-1.png.asset.json";
+import sweatpants2 from "@/assets/sweatpants-2.png.asset.json";
 import cropImage from "@/assets/crop-tee.png.asset.json";
 import cropTopBlackImage from "@/assets/crop-top-black.png.asset.json";
 import cropTopWhiteImage from "@/assets/crop-top-white.png.asset.json";
