@@ -1,6 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import baggyImage from "@/assets/baggy-sweatpants.png.asset.json";
-import sweatpantsImage from "@/assets/sweatpants.jpg.asset.json";
+import sweatpantsImage from "@/assets/sweatpants.png.asset.json";
 import cropImage from "@/assets/crop-tee.png.asset.json";
 import cropTopBlackImage from "@/assets/crop-top-black.png.asset.json";
 import cropTopWhiteImage from "@/assets/crop-top-white.png.asset.json";
