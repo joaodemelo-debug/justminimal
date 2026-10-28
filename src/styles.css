@@ -302,3 +302,90 @@ article img, .product-image {
   :root { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+
+/* Rounded, consistent surfaces throughout the Just Minimal storefront */
+:root {
+  --radius: 1.15rem;
+  --ios-radius-control: 999px;
+  --ios-radius-card: 1.25rem;
+  --ios-radius-panel: 1.75rem;
+}
+button,
+[role="button"],
+input,
+select,
+textarea {
+  border-radius: var(--ios-radius-control);
+}
+article > button {
+  border-radius: var(--ios-radius-card);
+  overflow: hidden;
+}
+article img,
+.product-image,
+[role="dialog"] img {
+  border-radius: var(--ios-radius-card);
+}
+.ios-product-backdrop {
+  animation: ios-backdrop-in 180ms ease-out both;
+}
+.ios-product-popup {
+  border-radius: var(--ios-radius-panel) !important;
+  overflow: auto;
+  isolation: isolate;
+  animation: ios-product-in 240ms cubic-bezier(.2,.8,.2,1) both;
+}
+.ios-product-popup > img,
+.ios-product-popup [data-slot="product-gallery"],
+.ios-product-popup figure {
+  overflow: hidden;
+  border-radius: var(--ios-radius-panel) var(--ios-radius-panel) 0 0;
+}
+.ios-product-popup button,
+.ios-popup button {
+  border-radius: 999px;
+}
+header a,
+header button,
+main a[class*="bg-"],
+main button[class*="bg-"],
+footer a {
+  border-radius: 999px;
+}
+section .border-t,
+section .border-b,
+section .border-y {
+  border-radius: 0;
+}
+@keyframes ios-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes ios-product-in {
+  from { opacity: 0; transform: translateY(14px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (min-width: 768px) {
+  .ios-product-popup {
+    border-radius: var(--ios-radius-panel) !important;
+  }
+  .ios-product-popup > img,
+  .ios-product-popup [data-slot="product-gallery"],
+  .ios-product-popup figure {
+    border-radius: var(--ios-radius-panel) 0 0 var(--ios-radius-panel);
+  }
+}
+@media (max-width: 639px) {
+  .ios-product-backdrop {
+    padding: 8px;
+  }
+  .ios-product-popup {
+    max-height: 92dvh;
+    border-radius: 26px !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ios-product-backdrop,
+  .ios-product-popup { animation: none; }
+}
