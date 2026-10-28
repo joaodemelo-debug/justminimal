@@ -210,3 +210,95 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   .ios-popup { animation: none; }
 }
+
+
+/* JUST MINIMAL — iPhone-inspired experience across the whole storefront */
+:root {
+  --radius: 1.15rem;
+  --ios-radius-card: 1.35rem;
+  --ios-radius-sheet: 1.8rem;
+  --ios-shadow: 0 12px 36px rgba(0, 0, 0, .08);
+  --ios-shadow-strong: 0 24px 80px rgba(0, 0, 0, .2);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html { min-height: 100%; background: var(--color-background); }
+body {
+  min-height: 100dvh;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+}
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+button, [role="button"], input, select, textarea {
+  border-radius: max(var(--radius), 12px);
+}
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 3px;
+}
+::selection { background: rgba(0, 0, 0, .12); }
+img { -webkit-user-drag: none; }
+header {
+  padding-top: env(safe-area-inset-top, 0px);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+button, a, [role="button"] {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+button:active, [role="button"]:active { transform: scale(.985); }
+input, select, textarea {
+  min-height: 44px;
+  border-radius: 14px;
+  padding: .75rem .9rem;
+  font-size: 16px;
+}
+article img, .product-image {
+  border-radius: 18px;
+}
+.ios-popup {
+  border-radius: var(--ios-radius-sheet);
+  box-shadow: var(--ios-shadow-strong);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.ios-popup > div:first-child {
+  min-height: 64px;
+}
+.ios-popup button {
+  min-height: 44px;
+}
+@media (max-width: 639px) {
+  main { padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px)); }
+  header { position: sticky; top: 0; z-index: 30; }
+  .ios-popup {
+    inset-inline: 8px !important;
+    bottom: calc(8px + env(safe-area-inset-bottom, 0px)) !important;
+    max-height: min(88dvh, 760px);
+    border-radius: 28px;
+  }
+  .ios-popup > div { padding-inline: 16px; }
+  .ios-popup .grid { min-width: 0; }
+  button, a { min-height: 40px; }
+  /* Keep two product columns while making cards readable on narrow phones. */
+  .product-grid, [aria-label="Product categories"] + .grid {
+    gap: 22px 10px;
+  }
+}
+@media (min-width: 640px) {
+  .ios-popup { border-radius: 28px; }
+}
+@media (hover: hover) and (pointer: fine) {
+  article:hover img { transform: scale(1.015); }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
