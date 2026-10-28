@@ -171,3 +171,14 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+
+/* Mobile storefront refinements */
+@layer base {
+  html, body, #root { max-width: 100%; }
+  body { overflow-x: hidden; }
+  @media (max-width: 639px) {
+    input, select, textarea { font-size: 16px; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+  }
+}
