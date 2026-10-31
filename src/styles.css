@@ -389,3 +389,14 @@ section .border-y {
   .ios-product-backdrop,
   .ios-product-popup { animation: none; }
 }
+
+/* True squircle corners for the square product tiles (where supported). */
+main article > a,
+main article > button,
+main article > a img,
+main article > button img,
+article img,
+.product-image {
+  border-radius: 28px;
+  corner-shape: squircle;
+}
