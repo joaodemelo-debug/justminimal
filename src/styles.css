@@ -215,7 +215,7 @@ html { scroll-behavior: smooth; }
 /* JUST MINIMAL — iPhone-inspired experience across the whole storefront */
 :root {
   --radius: 1.15rem;
-  --ios-radius-card: 1.35rem;
+  --ios-radius-card: 10px;
   --ios-radius-sheet: 1.8rem;
   --ios-shadow: 0 12px 36px rgba(0, 0, 0, .08);
   --ios-shadow-strong: 0 24px 80px rgba(0, 0, 0, .2);
@@ -308,7 +308,7 @@ article img, .product-image {
 :root {
   --radius: 1.15rem;
   --ios-radius-control: 999px;
-  --ios-radius-card: 1.25rem;
+  --ios-radius-card: 10px;
   --ios-radius-panel: 1.75rem;
 }
 button,
