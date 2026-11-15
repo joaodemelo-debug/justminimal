@@ -11,4 +11,6 @@
 - [x] Remove Sweatpants from the storefront and verify totals
 - [x] Apply GitHub updates: drop the password-page leftover, fix the South Africa storefront, link both stores
 - [x] Redirect retired password-page links directly to the public storefront
+- [x] Make product tiles, cart thumbnails, and product galleries square
+- [x] Add bilingual Black Friday campaign messaging to both storefronts
 - [ ] Publish so the public link matches the repository (needs your go-ahead)

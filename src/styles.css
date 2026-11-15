@@ -397,6 +397,6 @@ main article > a img,
 main article > button img,
 article img,
 .product-image {
-  border-radius: 28px;
-  corner-shape: squircle;
+  border-radius: 0;
 }
+.ios-product-popup .product-gallery-image { border-radius: 0; }
