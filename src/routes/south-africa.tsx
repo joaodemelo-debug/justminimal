@@ -5,6 +5,9 @@ import baggy1 from "@/assets/baggy-1.png.asset.json";
 import baggy2 from "@/assets/baggy-2.png.asset.json";
 import baggy3 from "@/assets/baggy-3.png.asset.json";
 import baggy4 from "@/assets/baggy-4.png.asset.json";
+import sweatpantsImage from "@/assets/sweatpants.png.asset.json";
+import sweatpants1 from "@/assets/sweatpants-1.png.asset.json";
+import sweatpants2 from "@/assets/sweatpants-2.png.asset.json";
 import { ProductGallery } from "@/components/ProductGallery";
 import cropImage from "@/assets/crop-tee.png.asset.json";
 import cropTopBlackImage from "@/assets/crop-top-black.png.asset.json";
@@ -28,12 +31,11 @@ export const Route = createFileRoute("/south-africa")({
 });
 
 const products = [
-  { id: "baggy", name: "Baggy Sweatpants", category: "BOTTOMS", price: 650, description: "Relaxed baggy fit designed for everyday movement.", image: baggy1.url, gallery: [baggy1.url, baggy2.url, baggy3.url, baggy4.url], colors: ["Dark blue", "Grey", "Black"], sizes: ["M", "L", "XL"] },
-  { id: "zip", name: "Quarter Zip", category: "OUTERWEAR", price: 650, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, colors: ["Black", "Grey"], sizes: ["M", "L", "XL"] },
-  { id: "crop", name: "Crop Tee", category: "TOPS", price: 380, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage.url, colors: ["White", "Black"], sizes: ["S", "M", "L", "XL"] },
-  { id: "tee", name: "Regatta Tee", category: "TOPS", price: 290, description: "Minimal everyday tee designed for effortless daily styling.", image: interiorImage.url, colors: ["Black", "White"], sizes: ["S", "M", "L", "XL"] },
-  { id: "hat", name: "Trucker Hat", category: "ACCESSORIES", price: 290, description: "The Just Minimal Trucker Hat.", image: hatImage.url, colors: ["Pink", "Black"], sizes: ["One size"] },
-  { id: "crop-top", name: "Crop Top", category: "WOMEN", price: 185, description: "A limited-edition Just Minimal crop top.", image: cropTopBlackImage.url, images: { Black: cropTopBlackImage.url, White: cropTopWhiteImage.url }, colors: ["Black", "White"], sizes: ["S", "M"] },
+  { id: "sweatpants", name: "SWEATPANTS 01", category: "BOTTOMS", price: 550, description: "Minimal sweatpants designed for everyday comfort and effortless styling.", image: sweatpantsImage.url, gallery: [sweatpantsImage.url, sweatpants1.url, sweatpants2.url], colors: ["Black"], sizes: ["S", "M", "L", "XL", "2XL"] },
+  { id: "baggy", name: "BAGGY SWEATPANTS 01", category: "BOTTOMS", price: 650, description: "Relaxed baggy fit designed for everyday movement.", image: baggy1.url, gallery: [baggy1.url, baggy2.url, baggy3.url, baggy4.url], colors: ["Dark blue", "Grey", "Black"], sizes: ["M", "L", "XL"] },
+  { id: "crop", name: "BOXY CROP TEE 01", category: "TOPS", price: 380, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage.url, colors: ["White", "Black"], sizes: ["S", "M", "L", "XL"] },
+  { id: "crop-top", name: "CROPPED 02", category: "WOMEN", price: 185, description: "A limited-edition Just Minimal cropped piece.", image: cropTopBlackImage.url, images: { Black: cropTopBlackImage.url, White: cropTopWhiteImage.url }, colors: ["Black", "White"], sizes: ["S", "M"] },
+  { id: "zip", name: "QUARTER ZIP 01", category: "OUTERWEAR", price: 650, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, colors: ["Black", "Grey"], sizes: ["M", "L", "XL"] },
 ];
 
 const money = (value: number) => new Intl.NumberFormat("en-ZA", { style: "currency", currency: "ZAR", maximumFractionDigits: 0 }).format(value);
