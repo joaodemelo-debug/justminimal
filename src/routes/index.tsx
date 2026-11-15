@@ -10,7 +10,7 @@ type CartItem = { productId: string; size: string; color: string; quantity: numb
 const WHATSAPP_NUMBER = "258851506799";
 
 const money = (value: number) => `${new Intl.NumberFormat("en-US").format(value)} MZN`;
-const APPOINTMENT_PRODUCT_IDS = new Set(["baggy", "zip", "hat"]);
+const APPOINTMENT_PRODUCT_IDS = new Set(["baggy", "zip"]);
 const appointmentUrl = (product: Product) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hello Just Minimal, I would like to enquire about the ${product.name} by appointment.`)}`;
 
 export const Route = createFileRoute("/")({
