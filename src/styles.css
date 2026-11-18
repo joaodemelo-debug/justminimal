@@ -390,7 +390,7 @@ section .border-y {
   .ios-product-popup { animation: none; }
 }
 
-/* True squircle corners for the square product tiles (where supported). */
+/* Keep product imagery square in the catalog, cart, and product gallery. */
 main article > a,
 main article > button,
 main article > a img,
@@ -399,4 +399,5 @@ article img,
 .product-image {
   border-radius: 0;
 }
+.ios-popup img,
 .ios-product-popup .product-gallery-image { border-radius: 0; }

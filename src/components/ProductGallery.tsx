@@ -7,7 +7,7 @@ export function ProductGallery({ name, photos }: { name: string; photos: string[
   return (
     <div className="relative aspect-square w-full bg-secondary">
       <div ref={ref} onScroll={(e) => setIndex(Math.round(e.currentTarget.scrollLeft / e.currentTarget.clientWidth))} className="absolute inset-0 flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label={`${name} photos`}>
-        {photos.map((src, i) => <img key={src} src={src} alt={`${name} photo ${i + 1}`} width={1024} height={1024} className="aspect-square w-full shrink-0 snap-center object-cover" />)}
+        {photos.map((src, i) => <img key={src} src={src} alt={`${name} photo ${i + 1}`} width={1024} height={1024} className="product-gallery-image aspect-square w-full shrink-0 snap-center object-cover" />)}
       </div>
       {photos.length > 1 && <>
         <button onClick={() => go(index - 1)} disabled={index === 0} aria-label="Previous photo" className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/90 px-3 py-2 font-bold disabled:opacity-0">‹</button>
