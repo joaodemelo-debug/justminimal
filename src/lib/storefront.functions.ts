@@ -37,7 +37,7 @@ export const getStorefrontData = createServerFn({ method: "GET" }).handler(async
     { id: "baggy", name: "BAGGY SWEATPANTS 01", category: "BOTTOMS", price: 1797, original: 2400, discount: 25, description: "Relaxed baggy fit designed for everyday movement.", image: baggy1.url, gallery: [baggy1.url, baggy2.url, baggy3.url, baggy4.url], colors: ["Azul escuro", "Cinza", "Preto"], sizes: ["M", "L", "XL"], stock: { M: 2, L: 3, XL: 1 } },
     { id: "crop", name: "BOXY CROP TEE 01", category: "TOPS", price: 950, original: 1400, discount: 32, description: "Minimal cropped silhouette designed to be styled effortlessly.", image: cropImage.url, colors: ["Branco", "Preto"], sizes: ["S", "M", "L", "XL"] },
     { id: "crop-top", name: "CROPPED 02", category: "WOMEN", price: 397, original: 780, discount: 49, description: "Crop top feminino Just Minimal, disponível em edição limitada.", image: cropTopBlackImage.url, images: { Preto: cropTopBlackImage.url }, colors: ["Preto"], sizes: ["S", "M", "XL"], stock: { S: 4, M: 1, XL: 1 }, variantStock: { "Preto:S": 4, "Preto:M": 1, "Preto:XL": 1 } },
-    { id: "zip", name: "QUARTER ZIP 01", category: "OUTERWEAR", price: 2400, original: 2400, discount: 0, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, colors: ["Preto", "Cinza"], sizes: ["M", "L", "XL"] },
+    { id: "zip", name: "QUARTER ZIP 01", category: "OUTERWEAR", price: 1797, original: 2400, discount: 25, description: "A clean layering piece built around the Just Minimal silhouette.", image: zipImage.url, colors: ["Preto", "Cinza"], sizes: ["M", "L", "XL"] },
   ];
   return {
     products,
