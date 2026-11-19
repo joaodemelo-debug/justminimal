@@ -390,6 +390,157 @@ section .border-y {
   .ios-product-popup { animation: none; }
 }
 
+/* A clearer, high-contrast storefront system for the Black Friday collection. */
+.store-header {
+  min-height: 4.5rem;
+  border-bottom-color: color-mix(in oklab, var(--foreground) 14%, transparent);
+}
+
+.campaign-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.campaign-hero-layout {
+  min-height: 24rem;
+  align-content: center;
+  gap: 2.5rem;
+}
+
+.campaign-title {
+  max-width: 12ch;
+  text-wrap: balance;
+}
+
+.campaign-copy {
+  max-width: 48rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.brand-story {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.collection-section {
+  scroll-margin-top: 5rem;
+}
+
+.collection-toolbar {
+  align-items: end;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.25rem;
+}
+
+.category-filter {
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+}
+
+.category-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.category-filter > button {
+  min-height: 2.75rem;
+  flex: 0 0 auto;
+}
+
+.product-tile {
+  min-width: 0;
+}
+
+.product-tile-image {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
+  border-radius: 0;
+  background: var(--color-secondary);
+}
+
+.product-tile-image img {
+  transition: transform 300ms ease;
+}
+
+.product-tile-cue {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: color-mix(in oklab, var(--background) 94%, transparent);
+  color: var(--foreground);
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-tile-cue svg {
+  flex: 0 0 auto;
+}
+
+.product-tile-info {
+  min-height: 4.5rem;
+  padding-top: 0.9rem;
+}
+
+.product-tile-name {
+  min-height: 2.7rem;
+  text-wrap: balance;
+}
+
+.product-tile-price {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 768px) {
+  .campaign-hero-layout {
+    min-height: 29rem;
+    gap: 4rem;
+  }
+
+  .campaign-copy {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .campaign-hero-layout {
+    min-height: auto;
+    gap: 1.75rem;
+    padding-block: 2.75rem;
+  }
+
+  .campaign-title {
+    max-width: 10ch;
+  }
+
+  .campaign-copy {
+    font-size: 0.9rem;
+  }
+
+  .collection-toolbar {
+    align-items: start;
+    padding-bottom: 1rem;
+  }
+
+  .product-tile-cue {
+    min-height: 2.5rem;
+    padding-inline: 0.65rem;
+    font-size: 0.58rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-tile-image img { transition: none; }
+}
+
 /* Keep product imagery square in the catalog, cart, and product gallery. */
 main article > a,
 main article > button,
